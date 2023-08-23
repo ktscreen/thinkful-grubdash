@@ -79,6 +79,7 @@ function updateOrder(req, res) {
 	const { data: { deliverTo, mobileNumber, dishes, status } = {} } = req.body;
 
 	res.locals.order = {
+		id: res.locals.order.id,
 		deliverTo: deliverTo,
 		mobileNumber: mobileNumber,
 		dishes: dishes,
